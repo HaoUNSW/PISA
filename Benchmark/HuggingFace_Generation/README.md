@@ -10,9 +10,10 @@ An example script of training/evaluation is given in example_script.sh
 
 ```bash
 python3 run_hf.py \
-    --model_name_or_path google_pegasus-xsum\
+    --model_name_or_path google_pegasus-xsum\  # can be replaced with other models
     --do_train \
-    --seed=88 \
+    --do_eval \  
+    --seed=66 \  # can select differenet seeds
     --save_total_limit=1 \
     --train_file SG/train.json \  # need to warp the PISA data (txt files) into json format via prepare_hf.py
     --validation_file SG/val.json \

@@ -1,13 +1,10 @@
-from transformers import BartTokenizer, BartForConditionalGeneration
-from transformers import BlenderbotSmallForConditionalGeneration, AutoTokenizer
-from transformers import PegasusForConditionalGeneration, ProphetNetForConditionalGeneration
-from transformers import T5ForConditionalGeneration
-from transformers import LEDForConditionalGeneration, PegasusTokenizer, BigBirdPegasusForConditionalGeneration
+from transformers import EncoderDecoderModel
 import argparse
 import os
 import torch
+from transformers import AutoTokenizer
 from tqdm import tqdm
-from metrics import metric_with_missing_rate
+from calculate_bleu import metric_with_missing_rate
 
 
 def str2bool(v):
@@ -20,13 +17,15 @@ def str2bool(v):
 def get_args():
     args = argparse.ArgumentParser()
     args.add_argument('-t', '--test_file',
-                      default='SG',
+                      default='CT',
                       type=str)
-    args.add_argument('-m', '--model_path', default='results',
+    args.add_argument('-m', '--model_path', default='results/ct_bert',
                       type=str)
-    args.add_argument('--model_name', default='bart',
+    args.add_argument('-n', '--model_name', default='bert',
                       type=str)
-    args.add_argument('-s', '--save_path', default='results',
+    args.add_argument('--tokenizer_path', default='bert-base',
+                      type=str)
+    args.add_argument('-s', '--save_path', default='results/ct_bert_pred',
                       type=str)
     args.add_argument('-b', '--batch_size', default=200,
                       type=int)
@@ -102,27 +101,9 @@ if __name__ == "__main__":
         os.mkdir(args.save_path)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if args.model_name == 'bart':
-        model = BartForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = BartTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'blendersmall':
-        model = BlenderbotSmallForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'pegasus':
-        model = PegasusForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'prophet':
-        model = ProphetNetForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'led':
-        model = LEDForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'T5':
-        model = T5ForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    elif args.model_name == 'bigbird':
-        model = BigBirdPegasusForConditionalGeneration.from_pretrained(args.model_path)
-        tokenizer = PegasusTokenizer.from_pretrained(args.model_path)
+    model = EncoderDecoderModel.from_pretrained(args.model_path)
+
+    tokenizer = AutoTokenizer.from_pretrained(args.model_path)
     model.to(device)
 
     gt_file = os.path.join(args.test_file, "test_y_prompt.txt")
@@ -141,10 +122,10 @@ if __name__ == "__main__":
             in_text = in_lines[start_idx: end_idx]
         else:
             in_text = in_lines[start_idx:]
-
-        tokens = get_tokens(in_text, tokenizer, max_len_in)
-        summary_ids = model.generate(tokens.to(device), num_beams=4, max_length=max_len_out, early_stopping=True)
-        predicted = tokenizer.batch_decode(summary_ids, skip_special_tokens=True)
+        input_ids = get_tokens(in_text, tokenizer, max_len_in)
+        input_ids = input_ids.to("cuda")
+        outputs = model.generate(input_ids)
+        predicted = tokenizer.batch_decode(outputs, skip_special_tokens=True)
         all_pred.extend(predicted)
 
     with open(os.path.join(args.save_path, "predicted.txt"), "w") as f:
@@ -154,4 +135,3 @@ if __name__ == "__main__":
     print(f"RMSE: {rmse}")
     print(f"MAE: {mae}")
     print(f"Missing Rate: {ms}")
-

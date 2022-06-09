@@ -25,3 +25,13 @@ The Pre-trained Models for HuggingFace Language Models can be accessed as follow
 | Electra           |  [google/electra-base-generator](https://huggingface.co/google/electra-base-generator)                                          |
 | BERT           |      [bert-base-uncased](https://huggingface.co/bert-base-uncased)                                      |
 | RoBERTa           |[roberta-base](https://huggingface.co/roberta-base)                                          |
+
+
+
+Core Packages:
+
+```
+transformers == 4.17.0
+torch == 1.10.2
+```
+

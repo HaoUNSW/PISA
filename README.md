@@ -11,11 +11,74 @@ This repo is open for review.
 
 
 ## Numerical Time Series Forecasting vs. PromptCast
+![](resources/concept.png)
 
+> Exisiting numerical-based forecasting VS. Prompt-based forecasting
+
+### ***PromptCast Evaluation Metrics***
+- RMSE
+- MAE
+- Missing Rate: whether the numerical forecasting target can be decoded (via string parsing) from the generated output prompts.
+
+
+## PISA Dataset
+### ***Forecasting Scenarios***
+The proposed PISA dataset contrains three real-world forecasting scenarios:
+- CT: city temperature forecasting
+- ECL: electricity consumption forecasting
+- SG: humana mobility visitor flow forecasting
+
+![](resources/statistics.png)
+
+> Details of three sub-sets
+> 
+<br></br>
+
+### ***Folder Structure (see [Dataset](Dataset/README.md))***
+```text
+Dataset
+|── PISA-Prompt
+    │── CT
+        │-- train_x_prompt.txt
+        │-- train_y_prompt.txt
+        │-- val_x_prompt.txt
+        │-- val_y_prompt.txt
+        │-- test_x_prompt.txt
+        │-- test_y_prompt.txt
+    │── ECL
+        │-- train_x_prompt.txt
+        │-- train_y_prompt.txt
+        │-- val_x_prompt.txt
+        │-- val_y_prompt.txt
+        │-- test_x_prompt.txt
+        │-- test_y_prompt.txt  
+    │── SG
+        │-- train_x_prompt.txt
+        │-- train_y_prompt.txt
+        │-- val_x_prompt.txt
+        │-- val_y_prompt.txt
+        │-- test_x_prompt.txt
+        │-- test_y_prompt.txt   
+```
 
 ## Benchmark Results
+![](resources/result_1.png)
 
+> RMSE and MAE performance
+> 
+<br></br>
 
+![](resources/result_2.png)
+
+> Missing Rate results
+> 
+<br></br>
+
+![](resources/result_3.png)
+
+> Results under train-from-scratch and cross-scenario zero-shot settings
+> 
+<br></br>
 
 ## RoadMap
 

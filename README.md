@@ -81,6 +81,14 @@ Dataset
 <br></br>
 
 ## RoadMap
+- [x] GitHub repo open for reviewing  
+- [ ] Paper release
+- [ ] Full dataset release in this repo
+- [ ] Full dataset release in HuggingFace Dataset page 
+- [ ] Leaderboard Website Launch
+- [ ]  ...
+- [ ]  ...
+- [ ]  ...
 
 ## Contact
 

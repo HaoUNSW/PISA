@@ -62,6 +62,9 @@ Dataset
 ```
 
 ## Benchmark Results
+Please check [Benchmark](Benchmark/README.md) folder for the implementations of benchmarked methods.
+<br></br>
+
 ![](resources/result_1.png)
 
 > RMSE and MAE performance

@@ -8,8 +8,8 @@
 
 
 <br/><br/>
-:smiley:Please note that only validation sets of three sub-sets (CT, ECL, SG) are provided as PISA examples during the submission period.
+:smiley: Please note that only validation sets of three sub-sets (CT, ECL, SG) are provided as PISA examples during the submission period.
 
-:relaxed:After the acceptance decision notification, the full PISA dataset (including train/val/testing sets) will be uploaded here and publicly available.
+:relaxed: After the acceptance decision notification, the full PISA dataset (including train/val/testing sets) will be uploaded here and publicly available.
 
 :hand: We strongly recommend users to register [SafeGraph Data for Academics](https://www.safegraph.com/academics) to know more about SafeGraph Data.

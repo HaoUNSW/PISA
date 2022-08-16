@@ -13,3 +13,8 @@
 :relaxed: After the acceptance decision notification, the full PISA dataset (including train/val/testing sets) will be uploaded here and publicly available.
 
 :hand: We strongly recommend users to register [SafeGraph Data for Academics](https://www.safegraph.com/academics) to know more about SafeGraph Data.
+
+
+
+NOTE!!
+PISA_Plus_Multistep_examples includes the prompts for prediction multistep ahead setting. This setting will be included in the next version of PISA (PISA+). You can ignore this if you want to evaluate your model on PISA. We will also upload the whole PISA+ in the near future.

@@ -1,7 +1,7 @@
 # PISA
 
 ## Introduction
-This repository is the reporisity of **Prompt-Based Time Series Forecasting: A New Task and Dataset** (NeurIPS 2022 Datasets and Benchmarks Track, currently under submission). PISA is a large-scale dataset including three real-world forecasting scenarios (three sub-sets) with 311,932 data instances in total. It is designed to support and facilitate the novel PromptCast task proposed in the paper. 
+This repository is the reporisity of **Prompt-Based Time Series Forecasting: A New Task and Dataset** (currently under submission). PISA is a large-scale dataset including three real-world forecasting scenarios (three sub-sets) with 311,932 data instances in total. It is designed to support and facilitate the novel PromptCast task proposed in the paper. 
 
 ## Updates
 

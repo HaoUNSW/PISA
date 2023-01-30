@@ -91,3 +91,17 @@ Please check [Benchmark](Benchmark/README.md) folder for the implementations of 
 - [ ] Leaderboard Website Launch
 - [ ]  ...
 - [ ]  ...
+
+
+### The paper is submitted to KDD Applied Data Science Track (currently Under Review). This repo is provided during the review process
+
+If you think this repo is useful, please cite our preprint version for the time being
+
+`
+@article{xue2022prompt,
+  title={Prompt-Based Time Series Forecasting: A New Task and Dataset},
+  author={Xue, Hao and Salim, Flora D},
+  journal={arXiv preprint arXiv:2210.08964},
+  year={2022}
+}
+`

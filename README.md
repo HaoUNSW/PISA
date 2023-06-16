@@ -77,18 +77,6 @@ Please check [Benchmark](Benchmark/README.md) folder for the implementations of 
 > 
 <br></br>
 
-## RoadMap
-- [x] GitHub repo open for reviewing  
-- [ ] Paper release
-- [ ] Full dataset release in this repo
-- [ ] Full dataset release in HuggingFace Dataset page 
-- [ ] Leaderboard Website Launch
-- [ ]  ...
-- [ ]  ...
-
-
-### The paper is submitted to KDD Applied Data Science Track (currently Under Review). This repo is provided during the review process
-
 If you think this repo is useful, please cite our preprint version for the time being
 
 `

@@ -77,13 +77,30 @@ Please check [Benchmark](Benchmark/README.md) folder for the implementations of 
 > 
 <br></br>
 
-If you think this repo is useful, please cite our preprint version for the time being
+If you think this repo is useful, please cite our papers
 
-`
+
+
 @article{xue2022prompt,
   title={Prompt-Based Time Series Forecasting: A New Task and Dataset},
   author={Xue, Hao and Salim, Flora D},
   journal={arXiv preprint arXiv:2210.08964},
   year={2022}
 }
-`
+
+@inproceedings{xue2022translating, 
+  title={Translating human mobility forecasting through natural language generation}, 
+  author={Xue, Hao and Salim, Flora D and Ren, Yongli and Clarke, Charles LA}, 
+  booktitle={Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining}, 
+  pages={1224--1233}, 
+  year={2022} 
+} 
+
+@inproceedings{xue2022leveraging, 
+  title={Leveraging language foundation models for human mobility forecasting}, 
+  author={Xue, Hao and Voutharoja, Bhanu Prakash and Salim, Flora D}, 
+  booktitle={Proceedings of the 30th International Conference on Advances in Geographic Information Systems}, 
+  pages={1--9}, 
+  year={2022} 
+} 
+

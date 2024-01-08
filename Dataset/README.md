@@ -8,7 +8,7 @@
 
 
 <br/><br/>
-:smiley: Please note that only validation sets of three sub-sets (CT, ECL, SG) are provided as PISA examples during the submission period.
+:smiley: Please note that only validation sets of three sub-sets (CT, ECL, SG) are provided here. For the train/validation sets, please find them [here](https://drive.google.com/drive/folders/1s9BIy36M6_G2TN7Kb1vdweyqEARtEfU5?usp=drive_link)!
 
 :relaxed: After the acceptance decision notification, the full PISA dataset (including train/val/testing sets) will be uploaded here and publicly available.
 

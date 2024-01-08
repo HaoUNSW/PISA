@@ -80,13 +80,16 @@ Please check [Benchmark](Benchmark/README.md) folder for the implementations of 
 If you think this repo is useful, please cite our papers
 
 
-
-@article{xue2022prompt,
-  title={Prompt-Based Time Series Forecasting: A New Task and Dataset},
-  author={Xue, Hao and Salim, Flora D},
-  journal={arXiv preprint arXiv:2210.08964},
-  year={2022}
-}
+```
+@ARTICLE{10356715,
+  author={Xue, Hao and Salim, Flora D.},
+  journal={IEEE Transactions on Knowledge and Data Engineering}, 
+  title={PromptCast: A New Prompt-Based Learning Paradigm for Time Series Forecasting}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-14},
+  doi={10.1109/TKDE.2023.3342137}}
 
 @inproceedings{xue2022translating, 
   title={Translating human mobility forecasting through natural language generation}, 
@@ -103,4 +106,4 @@ If you think this repo is useful, please cite our papers
   pages={1--9}, 
   year={2022} 
 } 
-
+```

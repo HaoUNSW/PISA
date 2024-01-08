@@ -81,7 +81,7 @@ If you think this repo is useful, please cite our papers
 
 
 ```
-@ARTICLE{10356715,
+@ARTICLE{xue2023promptcast,
   author={Xue, Hao and Salim, Flora D.},
   journal={IEEE Transactions on Knowledge and Data Engineering}, 
   title={PromptCast: A New Prompt-Based Learning Paradigm for Time Series Forecasting}, 

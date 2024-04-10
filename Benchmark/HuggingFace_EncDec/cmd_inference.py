@@ -4,7 +4,7 @@ import os
 import torch
 from transformers import AutoTokenizer
 from tqdm import tqdm
-from calculate_bleu import metric_with_missing_rate
+from metrics import metric_with_missing_rate
 
 
 def str2bool(v):

@@ -1,7 +1,7 @@
 # PromptCast: A New Forecasting Paradigm
 
 ## Introduction
-This repository is the reporisity of **PromptCast: A New Prompt-based Learning Paradigm for Time Series Forecasting** (currently under submission). PISA is a large-scale dataset including three real-world forecasting scenarios (three sub-sets) with 311,932 data instances in total. It is designed to support and facilitate the novel PromptCast task proposed in the paper. 
+This repository is the reporisity of **PromptCast: A New Prompt-based Learning Paradigm for Time Series Forecasting** (TKDE2023). PISA is a large-scale dataset including three real-world forecasting scenarios (three sub-sets) with 311,932 data instances in total. It is designed to support and facilitate the novel PromptCast task proposed in the paper. 
 
 
 ## Numerical Time Series Forecasting vs. PromptCast
